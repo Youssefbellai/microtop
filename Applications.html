@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .total {
+            font-weight: bold;
+        }
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+        .invoice-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+            position: relative;
+        }
+        .nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .nav ul li a:hover {
+            background-color: #ddd;
+        }
+        .nav ul li ul {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px 0;
+            z-index: 1000;
+            min-width: 160px;
+            border-radius: 4px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .nav ul li ul li {
+            display: block;
+            margin: 0;
+        }
+        .nav ul li ul li a {
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #333;
+            white-space: nowrap;
+        }
+        .nav ul li ul li a:hover {
+            background-color: #ddd;
+        }
+        .nav ul li:hover > ul {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice-container">
+        <header class="header">
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="Infos.html">Infos</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="Applications.html">Applications</a>
+                        <ul>
+                            <li><a href="CSV2TXTtab.html">CSV->TxTab</a></li>
+                            <li><a href="dat2CSV.html">Dat->CSV</a></li>
+                            <li><a href="DAT2TXTtab.html">Dat->TxTab</a></li>
+                            <li><a href="Txt6002Topgoen.html">Txt600->TopGoen</a></li>
+                            <li><a href="Txttab2CSV.html">TxTab->CSV</a></li>
+                            <li><a href="fusion.html">Fusion</a></li>
+                            <li><a href="permutation.html">Permutation</a></li>
+                            <li><a href="nettoyage.html">Nettoyage</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Documents.html">Documents</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+</body>
+</html>

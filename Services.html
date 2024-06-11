@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .total {
+            font-weight: bold;
+        }
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+        .invoice-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invoice-container">
+        <header class="header">
+            <nav class="nav">
+                <ul class="ul">
+                    <li class="li"><a class="a" href="index.html">Accueil</a></li>
+                    <li class="li"><a class="a" href="Infos.html">Infos</a></li>
+                    <li class="li"><a class="a" href="Services.html">Services</a></li>
+                    <li class="li"><a class="a" href="Applications.html">Applications</a></li>
+                    <li class="li"><a class="a" href="Documents.html">Documents</a></li>
+                </ul>
+            </nav>
+        </header>
+      
+        <div id="invoice">
+
+            <div class="toolbar hidden-print">
+                <div class="text-right">
+                    <button id="printInvoice" class="btn btn-info"><i class="fa fa-print"></i> Print</button>
+                    <button class="btn btn-info"><i class="fa fa-file-pdf-o"></i> Export as PDF</button>
+                </div>
+                <hr>
+            </div>
+            <div class="invoice overflow-auto">
+                <div style="min-width: 600px">
+                    <header>
+                        <div class="row">
+                            <div class="col">
+                                <a target="_blank" href="https://lobianijs.com">
+                                    <img src="http://lobianijs.com/lobiadmin/version/1.0/ajax/img/logo/lobiadmin-logo-text-64.png" data-holder-rendered="true" />
+                                    </a>
+                            </div>
+                            <div class="col company-details">
+                                <h2 class="name">
+                                    <a target="_blank" href="https://lobianijs.com">
+                                    Arboshiki
+                                    </a>
+                                </h2>
+                                <div>455 Foggy Heights, AZ 85004, US</div>
+                                <div>(123) 456-789</div>
+                                <div>company@example.com</div>
+                            </div>
+                        </div>
+                    </header>
+                    <main>
+                        <div class="row contacts">
+                            <div class="col invoice-to">
+                                <div class="text-gray-light">INVOICE TO:</div>
+                                <h2 class="to">John Doe</h2>
+                                <div class="address">796 Silver Harbour, TX 79273, US</div>
+                                <div class="email"><a href="mailto:john@example.com">john@example.com</a></div>
+                            </div>
+                            <div class="col invoice-details">
+                                <h1 class="invoice-id">INVOICE 3-2-1</h1>
+                                <div class="date">Date of Invoice: 01/10/2018</div>
+                                <div class="date">Due Date: 30/10/2018</div>
+                            </div>
+                        </div>
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th class="text-left">DESCRIPTION</th>
+                                    <th class="text-right">HOUR PRICE</th>
+                                    <th class="text-right">HOURS</th>
+                                    <th class="text-right">TOTAL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="no">04</td>
+                                    <td class="text-left"><h3>
+                                        <a target="_blank" href="https://www.youtube.com/channel/UC_UMEcP_kF0z4E6KbxCpV1w">
+                                        Youtube channel
+                                        </a>
+                                        </h3>
+                                       <a target="_blank" href="https://www.youtube.com/channel/UC_UMEcP_kF0z4E6KbxCpV1w">
+                                           Useful videos
+                                       </a> 
+                                       to improve your Javascript skills. Subscribe and stay tuned :)
+                                    </td>
+                                    <td class="unit">$0.00</td>
+                                    <td class="qty">100</td>
+                                    <td class="total">$0.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="no">01</td>
+                                    <td class="text-left"><h3>Website Design</h3>Creating a recognizable design solution based on the company's existing visual identity</td>
+                                    <td class="unit">$40.00</td>
+                                    <td class="qty">30</td>
+                                    <td class="total">$1,200.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="no">02</td>
+                                    <td class="text-left"><h3>Website Development</h3>Developing a Content Management System-based Website</td>
+                                    <td class="unit">$40.00</td>
+                                    <td class="qty">80</td>
+                                    <td class="total">$3,200.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="no">03</td>
+                                    <td class="text-left"><h3>Search Engines Optimization</h3>Optimize the site for search engines (SEO)</td>
+                                    <td class="unit">$40.00</td>
+                                    <td class="qty">20</td>
+                                    <td class="total">$800.00</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td colspan="2">SUBTOTAL</td>
+                                    <td>$5,200.00</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td colspan="2">TAX 25%</td>
+                                    <td>$1,300.00</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td colspan="2">GRAND TOTAL</td>
+                                    <td>$6,500.00</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <div class="thanks">Thank you!</div>
+                        <div class="notices">
+                            <div>NOTICE:</div>
+                            <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
+                        </div>
+                    </main>
+                    <footer>
+                        Invoice was created on a computer and is valid without the signature and seal.
+                    </footer>
+                </div>
+                <!--DO NOT DELETE THIS div. IT is responsible for showing footer always at the bottom-->
+                <div></div>
+            </div>
+        </div>
+       
+   
+        
+       
+        <h1>Facture</h1>
+        <table>
+            <tr>
+                <th>Numéro de facture</th>
+                <td><?php echo $numero_facture; ?></td>
+                <th>Date</th>
+                <td><?php echo $dateFacture; ?></td>
+            </tr>
+            <tr>
+                <th>Nom du client</th>
+                <td><?php echo $nomClient; ?></td>
+                <th>ICE du client</th>
+                <td><?php echo $iceClient; ?></td>
+            </tr>
+        </table>
+
+        <h2>Détails des articles</h2>
+        <table>
+            <tr>
+                <th>Description de projet</th>
+                <th>Quantité</th>
+                <th>Prix unitaire</th>
+                <th>Total HT</th>
+            </tr>
+            <?php foreach ($articles as $article) : ?>
+                <tr>
+                    <td><?php echo $article[0]; ?></td>
+                    <td><?php echo $article[1]; ?></td>
+                    <td><?php echo $article[2]; ?></td>
+                    <td><?php echo $article[1] * $article[2]; ?></td>
+                </tr>
+            <?php endforeach; ?>
+            <tr class="total">
+                <td colspan="3">Total HT</td>
+                <td><?php echo $total_ht; ?></td>
+            </tr>
+            <tr class="total">
+                <td colspan="3">TVA (20%)</td>
+                <td><?php echo $tva; ?></td>
+            </tr>
+            <tr class="total">
+                <td colspan="3">Total TTC</td>
+                <td><?php echo $total_ttc; ?></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
